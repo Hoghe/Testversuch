@@ -8,9 +8,11 @@ public class MainMenuBar extends MenuBar implements ActionListener{
 	
 	private Menu _menu;
 	private MenuItem _color1, _color2, _color3;
+	private final Canvas _drawObjects;
 	
-	public MainMenuBar() {
+	public MainMenuBar(Canvas drawObjects) {
 		_menu = new Menu("Ändere die Hintergrundfarbe");
+		this._drawObjects = drawObjects;
 				
 //		_menu.add(new MenuItem("color: red"));
 //		_menu.add(new MenuItem("color: yellow"));
@@ -34,13 +36,13 @@ public class MainMenuBar extends MenuBar implements ActionListener{
 
 		if (e.getSource() == _color1) {
 			System.out.println("test rot");
-			setBackground(Color.red);
+			_drawObjects.setBackground(Color.red);
 		}else if (e.getSource() == _color2) {
 			System.out.println("test gelb");
-			setBackground(Color.green);
+			_drawObjects.setBackground(Color.green);
 		}else if (e.getSource() == _color3) {
 			System.out.println("test blau");
-			setBackground(Color.blue);
+			_drawObjects.setBackground(Color.blue);
 		}
 	}
 
