@@ -4,9 +4,10 @@ import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
 
-public class MainWindow extends Frame implements WindowListener {
+public class MainWindow extends Frame implements WindowListener{
 	
 	private int _x, _y;
+
 
 	
 	public MainWindow(int windowSizeX, int windowSizeY) {
@@ -18,10 +19,11 @@ public class MainWindow extends Frame implements WindowListener {
 	//	add(new DrawObject(_x, _y));
 		DrawObject d = new DrawObject(_x, _y);
 		add(d);
-		setMenuBar(new MainMenuBar());
+		MainMenuBar mmb = new MainMenuBar(d);
+		setMenuBar(mmb);
 
-		
 	}
+
 	
 	public int getX () {
 		return _x;
@@ -76,4 +78,6 @@ public class MainWindow extends Frame implements WindowListener {
 		// TODO Automatisch generierter Methodenstub
 		
 	}
+
+
 }
