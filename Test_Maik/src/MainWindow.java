@@ -19,6 +19,8 @@ public class MainWindow extends Frame implements WindowListener {
 		DrawObject d = new DrawObject(_x, _y);
 		add(d);
 		setMenuBar(new MainMenuBar());
+		
+		System.out.println("Einfache Textausgabe als Variante1.1.0");
 
 		
 	}
